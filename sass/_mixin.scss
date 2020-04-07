@@ -1,0 +1,67 @@
+//Mixin
+
+@mixin border_radius($radio) {
+    -webkit-border-radius: $radio;
+       -moz-border-radius: $radio;
+        -ms-border-radius: $radio;
+         -o-border-radius: $radio;
+            border-radius: $radio;
+}
+
+@mixin _transition($transtition) {
+    -webkit-transition: $transtition;
+       -moz-transition: $transtition;
+        -ms-transition: $transtition;
+         -o-transition: $transtition;
+            transition: $transtition;
+    
+}
+
+@mixin gotoXY($x,$y,$top_X,$left_Y) {
+    position: absolute; // Imprescindible 
+    font-size: relative; // Indiferente 
+    width: 0px;    //ancho
+    height: 0px;  //largo
+    left: $left_Y; // X 
+    top: $top_X;   // Y 
+    transform: translate($x,$y); // Reposicionar X,Y 
+}
+
+
+@mixin btn_x {
+    -webkit-animation-name: slideOutRight;
+    animation-name: slideOutRight;
+
+    @keyframes slideOutRight {
+        from {
+            -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+        }
+      
+        to {
+            visibility: hidden;
+            -webkit-transform: translate3d(100%, 0, 0);
+            transform: translate3d(100%, 0, 0);
+        }
+      }
+    }
+    
+    //Animated
+    /*
+    @mixin corazon_x {
+        animation-name:corazon;            //Nombre de la animacion
+        animation-duration: .8s;            //Duracion de la Animacion
+        animation-timing-function:linear;   //Referencia a el tipo de animacion
+        animation-iteration-count:infinite; //referencia a cuantas veces sucede la animacion
+        animation-direction:alternate;      //referencia determinante de la animacion
+    
+     @keyframes corazon {
+        from {
+            transform: scale(1)
+          }
+          to {
+            transform: scale(1.1)
+          }
+     }
+    }
+    */

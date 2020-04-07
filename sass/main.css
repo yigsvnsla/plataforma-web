@@ -1,0 +1,209 @@
+/*
+@mixin corazon_x {
+    animation-name:corazon;            //Nombre de la animacion
+    animation-duration: .8s;            //Duracion de la Animacion
+    animation-timing-function:linear;   //Referencia a el tipo de animacion
+    animation-iteration-count:infinite; //referencia a cuantas veces sucede la animacion
+    animation-direction:alternate;      //referencia determinante de la animacion
+
+ @keyframes corazon {
+    from {
+        transform: scale(1)
+      }
+      to {
+        transform: scale(1.1)
+      }
+ }
+}
+*/
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0px;
+  background: #303030;
+}
+body header {
+  width: 100%;
+  margin-top: 0px;
+  height: 150px;
+  overflow: hidden;
+  position: relative;
+}
+body header div.header {
+  width: 100%;
+  height: 80px;
+  position: relative;
+}
+body header div.header nav.menu_2 {
+  margin: 20px auto;
+  width: 90%;
+  max-width: 1000px;
+  top: -20px;
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+body header div.header nav.menu_2 ul.menu_2 {
+  display: table;
+  width: 100%;
+  background: #000000;
+  position: relative;
+}
+body header div.header nav.menu_2 ul.menu_2 li {
+  display: table-cell;
+}
+body header div.header nav.menu_2 ul.menu_2 li:hover ul {
+  display: block;
+  height: 100%;
+  border-top: 2px solid white;
+}
+body header div.header nav.menu_2 ul.menu_2 ul {
+  display: box;
+  position: absolute;
+  background: #000000;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+  height: 0%;
+  border-radius: 0px 0px 10px 10px;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  border-top: 2px solid white;
+}
+body header div.header nav.menu_2 ul.menu_2 a {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.4);
+  color: white;
+  display: block;
+  line-height: 20px;
+  padding: 20px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+}
+body header div.header nav.menu_2 ul.menu_2 a:hover {
+  background: #33a4c7;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+body div.container {
+  margin-top: -50px;
+  align-items: center;
+  height: 600px;
+  display: flex;
+}
+body div.container aside.menu_lateral {
+  justify-content: center;
+  text-align: center;
+  width: 200px;
+  height: 500px;
+  background: #303030;
+  border: 2px solid white;
+  border-left: 0px;
+  border-radius: 0px 10px 10px 0px;
+}
+body div.container aside.menu_lateral img.avatar1 {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  align-self: center;
+  margin-bottom: 5%;
+}
+body div.container aside.menu_lateral p.avatar1 {
+  margin: 5%;
+  color: white;
+}
+body div.container aside.menu_lateral input[type=checkbox].menu {
+  display: none;
+}
+body div.container aside.menu_lateral input[type=checkbox].menu:checked + label {
+  color: #ff0000;
+}
+body div.container aside.menu_lateral label {
+  color: white;
+}
+body div.container div.body {
+  margin-left: 5%;
+  width: 75%;
+  height: 100%;
+  border: 3px solid #000000;
+  text-align: center;
+  background: white;
+}
+
+#particles-js {
+  position: fixed;
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+}
+
+nav ul li span.primero {
+  background: #174459;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+nav ul li span.segundo {
+  background: palegreen;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+nav ul li span.tercero {
+  background: darkslateblue;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+nav ul li span.cuarto {
+  background: slategrey;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+nav ul li span.quinto {
+  background: gray;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+nav ul li a:hover span {
+  top: 0;
+}
+nav ul li a span {
+  display: block;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  position: absolute;
+  top: -55px;
+}
+nav ul li a span .icon {
+  display: block;
+  line-height: 60px;
+}
+
+/*miselaneos*/
+
+/*# sourceMappingURL=main.css.map */

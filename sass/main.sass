@@ -1,0 +1,143 @@
+@import _mixin
+@import _variables
+*
+    margin:0
+    padding:0
+body
+    margin: 0px
+    background:$color-gris
+    header
+        width:100%
+        margin-top: 0px
+        height: 150px
+        overflow: hidden
+        position: relative
+        div.header
+            width:100%
+            height: 80px
+            position: relative
+            nav.menu_2
+                margin:20px auto
+                width: 90%
+                max-width: 1000px
+                top: -20px
+                position: absolute
+                left: 0
+                right: 0
+                ul.menu_2
+                    display: table
+                    width:100%
+                    background:$color-negro
+                    position: relative
+                    li
+                        display: table-cell
+                        &:hover
+                            ul
+                                display: block
+                                height: 100%  
+                                border-top: 2px solid $color-blanco
+                    ul     
+                        display: box
+                        position: absolute
+                        background: $color-negro
+                        left: 0
+                        right: 0
+                        overflow: hidden
+                        height: 0%
+                        border-radius: 0px 0px 10px 10px
+                        +_transition(all 0.5s ease)
+                        border-top: 2px solid $color-blanco
+                        
+                    a 
+                        font-family: Arial, Helvetica, sans-serif
+                        font-size: 18px
+                        text-shadow: 0px 2px 2px rgba(0, 0, 0,.4)
+                        color: $color-blanco
+                        display: block
+                        line-height: 20px
+                        padding: 20px
+                        position: relative
+                        text-align: center
+                        text-decoration: none
+                        &:hover
+                            background:$color-azul-claro
+                            +_transition(all 0.5s ease)                
+    div.container
+        margin-top: -50px
+        align-items: center
+        height: 600px 
+        display: flex
+        aside.menu_lateral
+            
+            justify-content: center
+            text-align: center 
+            width: 200px
+            height: 500px 
+            background: $color-gris
+            border: 2px solid $color-blanco 
+            border-left: 0px
+            border-radius: 0px 10px 10px 0px
+            img.avatar1 
+                width: 100px
+                height: 100px
+                border-radius: 50%
+                align-self: center
+                margin-bottom: 5%
+            p.avatar1 
+                margin: 5%
+                color:$color-blanco
+            input[type="checkbox"].menu
+                display: none
+                &:checked + label
+                    color : $color-rojo
+            label 
+                color:$color-blanco
+        div.body
+            margin-left: 5%
+            width: 75%
+            height: 100%
+            border: 3px solid $color-negro
+            text-align: center
+            background: $color-blanco
+
+#particles-js
+    position: fixed
+    z-index: -1
+    height: 100%
+    width: 100%
+
+    
+nav
+    ul 
+        li 
+            span.primero
+                background: $color-azul-rey
+                +_transition(all 0.5s ease)
+                //
+            span.segundo
+                background: palegreen
+                +_transition(all 0.5s ease)
+            span.tercero
+                background: darkslateblue
+                +_transition(all 0.5s ease)
+            span.cuarto
+                background: slategrey
+                +_transition(all 0.5s ease)
+            span.quinto
+                background: gray
+                +_transition(all 0.5s ease)
+            a 
+                &:hover span
+                    top:0
+                span
+                    display: block
+                    height: 100%
+                    width: 100%
+                    left: 0
+                    position: absolute
+                    top: -55px
+                    .icon
+                        display: block
+                        line-height: 60px
+/*miselaneos*/
+
