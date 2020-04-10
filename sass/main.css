@@ -45,6 +45,10 @@ body header div.header nav.menu_2 {
   position: absolute;
   left: 0;
   right: 0;
+  border: 5px solid #52c8ff;
+  border-top: 0px;
+  border-radius: 0px 0px 10px 10px;
+  box-shadow: 0px 0px 5px 5px #44d6fa50;
 }
 body header div.header nav.menu_2 ul.menu_2 {
   display: table;
@@ -58,7 +62,7 @@ body header div.header nav.menu_2 ul.menu_2 li {
 body header div.header nav.menu_2 ul.menu_2 li:hover ul {
   display: block;
   height: 100%;
-  border-top: 2px solid white;
+  box-shadow: 0px 0px 5px 5px #44d6fa50;
 }
 body header div.header nav.menu_2 ul.menu_2 ul {
   display: box;
@@ -74,7 +78,7 @@ body header div.header nav.menu_2 ul.menu_2 ul {
   -ms-transition: all 0.5s ease;
   -o-transition: all 0.5s ease;
   transition: all 0.5s ease;
-  border-top: 2px solid white;
+  border: 2px solid #52c8ff;
 }
 body header div.header nav.menu_2 ul.menu_2 a {
   font-family: Arial, Helvetica, sans-serif;
@@ -112,7 +116,7 @@ body div.container aside.menu_lateral {
   background: linear-gradient(to right, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#80000000", endColorstr="#00000000",GradientType=10 );
   border-radius: 0px 10px 10px 0px;
-  border: 2px solid #52c8ff;
+  border: 5px solid #52c8ff;
   border-left: 0px;
   box-shadow: 0px 0px 5px 5px #44d6fa50;
 }
@@ -128,7 +132,7 @@ body div.container aside.menu_lateral img.avatar1 {
 body div.container aside.menu_lateral p.avatar1 {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 20px;
-  text-shadow: 0px 2px 2px #3cd8ffd8;
+  text-shadow: 0px 2px 2px #6d6d6dd8;
   margin: 6%;
   color: white;
 }
