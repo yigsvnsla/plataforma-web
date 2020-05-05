@@ -1,52 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
 *{
     padding: 0%;
     margin: 0%;
 }
+body{
+  background: black;
+}
 header {
     background: rgba(0,0,0,0.5);
-    width: 99.3%;
+    width: 100%;
     position: fixed;
     z-index: 100;
-    border: 5px solid blue;
+    border-bottom: 5px solid white;
+    
   }
 
+  div.body-padding{
+    padding-top: 50px;
+    display: block;
+  }
+
+section.center{
+  display: flex;
+  width: 100%;
+  
+
+}
+
+div.centerContent{
+  background: rgba(31, 31, 31, 0.5);
+  width:100%;
+  display: flexbox;
+  justify-content: start;
+  margin: 5%;
+  text-align: center;
+  align-content: flex-start;
+  border-radius: 5%;
+}
+
+div.centerContent>span {
+  font-family: 'Kanit', sans-serif;
+  color: white;
+  font-size: 50px;
+}
+
+div.centerContent>p{
+  font-size: 20px;
+  color: #fff;
+  font-family: 'Russo One', sans-serif;
+}
+div.centerContent>i>img{
+  width: 100%;
+  display: block;
+  align-self: auto;
+}
 div.headerHome{
     float: left;
     display: flex;
     width: 35%;
     justify-content: center;
     align-items: center;
+    margin-left: -3px;
 
 }
 div.headerMenu{
     float: right;
     display: block;
-    border: 5px solid red;
     align-items: center;
 }
 div.headerHome>a{
     display: block;
     color: white;
     text-decoration: none;
-    font-family: Arial, sans-serif;
+    font-family: "Kanit", sans-serif;
     font-size: 20px;
-
 }
-
 div.headerHome > img{
     width: 50px;
-    display: block;
+    box-shadow: inset 0 0 0 15px #fff;
+    border-radius: 50%;
     margin: 5px;
 }
-
   nav.headerMenu > ul {
     list-style: none;
-    overflow: hidden; /* Limpiamos errores de float */
   }
   nav.headerMenu>ul>li {
     float: left;
     font-family: Arial, sans-serif;
     font-size: 16px;
+    margin-top:5px;
   }
    
   nav.headerMenu>ul>li>a {
@@ -57,5 +100,16 @@ div.headerHome > img{
   }
    
   nav>ul>li:hover {
-    background: #3ead47;
+    margin-top: 2px;
+    margin: 0px;
+    border-radius: 10px 10px 10px 10px;
+    box-shadow: inset 0px 0px 5px 5px #44d6fa50;
+    border: 3px solid #52c8ff;
+  }
+
+  #particles-js{
+    position: fixed;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
   }
