@@ -3,8 +3,8 @@
     <head>
         <meta charset="UTF-8">
             <title>Bienvenido</title>
-            <link rel="stylesheet" href="/source/style.css">
-            <link rel="stylesheet" href="/sass/main.css">
+            <link rel="stylesheet" href="../source/style.css">
+            <link rel="stylesheet" href="../sass/main.css">
         </head>
         <body>
             <div id="particles-js"></div>
@@ -56,7 +56,7 @@
         <aside class="menu_lateral border-gradient" id="menu_lateral">
             <div class="avatar1">
                 <p class="avatar1">Bienvenido</p>
-                <img src="/img/avatar_2x.png" class="avatar1">
+                <img src="./img/avatar_2x.png" class="avatar1">
                 <br>
                 <label for="">*nombre Usuario*</label>
                 <br>
@@ -82,9 +82,9 @@
         </section>
         </div>
     </div>  
-        <script type="text/javascript" src="\js\particles.min.js"></script>
-        <script type="text/javascript" src="\js\app.js"></script>
-        <script type="text/javascript" src="\ajax\verificar_navegador.js"></script>
+        <script type="text/javascript" src="../js/particles.min.js"></script>
+        <script type="text/javascript" src="../js/app.js"></script>
+        <script type="text/javascript" src="../ajax/datosAJAX.js"></script>
 
 </body>
 </html>
