@@ -17,37 +17,38 @@ function login($user,$pass){
                 //Consulta a DB para verificar si el usuario ya existe                
                     while ($row = $stmt->fetch()){
                         if ($row["_user"]==$user and $row["_clave"]==$pass){
-                            $_SESSION['username']=$user;
-                            header("location: ../php/home.php");
-                            //echo"este usuario si existe";
-                        }else{
-                            echo " usuario o clave invalida";
+                            $_SESSION['username']=$row["_user"];
+                            //header( "refresh:3; url= home/php/home.php" ); 
+                            //header("Location: http://localhost:2500/home/");
+                            return print('true');
+                            $dbh= null;
                             exit();
+                        }else{
+                           return print("usuario o clave invalida");
+                           $dbh= null;
+                           exit();
                         }
                     }
                     //return " este usuario no existe";
-                    echo"este usuario no existe";
+                    return print("este usuario no existe") ;
+                    $dbh= null;
             }
         }
-        $dbh= null;
     }catch (PDOException $e) {
         die('conexion fallida: '.$e->getMessage());
     }finally{
         $dbh=null;
     }
 }
-
 function filter($datos){
     $datos = trim($datos);             // Elimina espacios antes y después de los datos
     $datos = stripslashes($datos);     // Elimina backslashes \
     $datos = htmlspecialchars($datos); // Traduce caracteres especiales en entidades HTML
     return $datos;
 }
-   
-session_start();
 
 if(isset($_POST)){ 
-    
+    session_start();
     if(isset($_POST['pass']) && isset($_POST['user'])){
         login(filter($_POST['user']),filter($_POST['pass']));
     }

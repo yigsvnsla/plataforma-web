@@ -9,7 +9,9 @@
 <body id="">
     <div id="particles-js"></div>
     <?php include('../login/php/_conexionLogin.php') ?>
-    <header style="color:white; text-align:center"><h1 id="title">tusnalgas.com</h1></header>
+    <header style="color:white; text-align:center">
+      <h1 id="title">tusnalgas.com</h1>
+    </header>
     <section class="register-account"> 
           <div class="signform">      
             <div class="left">
@@ -25,11 +27,11 @@
                   <span>Ingresa tu Cuenta</span>
                 </div>
                 <div class="form">
-                  <form class="login-form" id="login-form" method="POST" action="../login/php/_conexionLogin.php" autocomplete="off">
-                      <input type="text" placeholder="Usuario" name="user" id="user"/>
-                      <input type="password" placeholder="Contraseña" name="pass" id="pass"/>        
-                      <input class="subbt" type="submit" value="Ingresa" style="border:none;" id="btnSubmit"/>   
+                  <form class="login-form" id="login-form" method="POST" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" autocomplete="on">
+                      <input type="text" placeholder="Usuario" id="user"/>
+                      <input type="password" placeholder="Contraseña" id="pass" autocomplete="on"/>       
                   </form>
+                      <input class="subbt" type="button" value="Ingresa" style="border:none;" id="btnSubmit"/>   
                   <input type="checkbox" id="remember" name="remember"><span style="color:#b6b6b6;font-size: 0.9em;">Recuerdame</span><a href="#">¿Olvido su Contraseña?</a>        
                 </div>
             </div>       
